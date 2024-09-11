@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link { text-decoration: none; }
+            a:visited { text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            a:active { text-decoration: none; }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>trAIn CODER Login</title>
+    </head>
+<body>
+    <header>
+        <div class="container-fluid navbar bg-black fixed-top">
+            <a href="train_coder.html"><img src="images\20230310_084112_0000.png" width="20%" height="20%"></a>
+        </div>
+    </header>
+    <center>
+        <br><br><br><br>
+        <div class="container">
+		<h1>Login</h1>
+
+		<form class="">
+			<label for="name">Name:</label>
+			<input type="text" pattern="[a-zA-Z]" id="name" name="name" placeholder="Enter your name" required >
+            <br><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="johndoe@123.com" required>
+            <br><br>
+
+            <label for="gender">gender:</label>
+            <br>
+            <div class="container-sm text-center">
+                <input type="radio" id="male" name="gender" value="male">
+                <label>male</label>
+                <br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label>Female</label>
+                <br>
+                <input type="radio" id="other" name="gender">
+                <label>other</label>
+                <input type="text" id="other" name="gender">
+                <br><br>
+            </div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" placeholder="*************" maxlength="20">
+            <br><br>
+
+            <label for="phone">phone:</label>
+            <input type="tel" id="pass" name="phone" placeholder="123456789" maxlength="20">
+            <br><br>
+
+            <label for="Birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" placeholder="yyyy-mm-dd">
+            <br><br>
+
+			<input type="submit"name="submit">
+            <input type="reset" name="reset">
+		</form>
+	</div>
+
+    </center>
+</body>
+</html>

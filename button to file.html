@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#send-btn").click(function() {
+        const str = $("#string-input").val(); // Get the string from an input element
+        $.ajax({
+          type: "POST",
+          url: "/path/to/document-file",
+          data: { stringData: str }, // Send the string as the payload data
+          success: function(response) {
+            console.log("String sent successfully: ", response);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error sending string: ", textStatus, errorThrown);
+          }
+        });
+      });
+    });
+    function copyToClipboard() {
+        // Get the text content of the container element
+        const container = document.getElementById("container");
+        const text = container.textContent;
+      
+        // Use the Clipboard API to copy the text to the clipboard
+        navigator.clipboard.writeText(text)
+          .then(() => {
+            console.log("Text copied to clipboard");
+          })
+          .catch((err) => {
+            console.error("Failed to copy text: ", err);
+          });
+      }
+      
+</script>
+    <title>Document</title>
+</head>
+<body>
+    <label for="string-input">Enter String:</label>
+  <input type="text" id="string-input" name="string-input">
+  <button id="send-btn">Send String</button>
+    <div id="container">
+        This is the text content that you want to copy.
+      </div>
+      
+      <button onclick="copyToClipboard()">Copy Text</button>
+      
+</body>
+</html>
