@@ -4,3 +4,4 @@ The aim of this project is to be able to collect and size data into form on whic
 It will tae roles and responsibilities of AI as an Input.
 And return files links codes on implementing tem etc
 to achieve most stable file System
+And to achive a Trained model effectively
